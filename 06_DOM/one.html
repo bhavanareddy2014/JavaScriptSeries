@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color:#fff;
+        }
+    </style>
+</head>
+<body class ="bg-black">
+    <div>
+        <h1 id= "title" class="heading">DOM Model <span style="display: none;"> test</span></h1>
+
+        <h2 id= "title" class="heading">DOM Model <span style="display: none;"> test</span></h2>
+        <h2 id= "title" class="heading">DOM Model <span style="display: none;"> test</span></h2>
+        <h2 id= "title" class="heading">DOM Model <span style="display: none;"> test</span></h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, neque quia itaque tempora voluptates et modi placeat excepturi sunt culpa accusantium velit doloremque voluptas sed, corrupti tempore hic sint inventore</p>
+    </div>
+</body>
+</html>
+
+// title.textContent  
+ => it will show the content which is not visible as well
+ "DOM Model test"
+// title.innerHTML 
+
+=> it will give entire html
+
+  'DOM Model <span style="display: none;"> test</span><'
+
+// title.innerText
+
+=> it will show only content which is visible
+
+"DOM Model"
+
+
+------------------
+document.getElementsByClassName("heading")
+HTMLCollection [h1#title.heading, title: h1#title.heading]
+0
+: 
+h1#title.heading
+title
+: 
+h1#title.heading
+length
+: 
+1
+[[Prototype]]
+: 
+HTMLCollection
+document.querySelector('h1')
+document.querySelectorAll('.heading')
+document.querySelectorAll('#id')

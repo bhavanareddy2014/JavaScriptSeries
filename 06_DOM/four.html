@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM ADD AND REMOVE ELEMENTS</title>
+</head>
+<body style="background-color: #212121; color:#fff" >
+    <ul class="language">
+        <li> java script</li>
+        <!-- <li> java </li>
+        <li> phython</li>
+        <li> ruby</li> -->
+    </ul>
+</body>
+<script>
+function addLanguage(langName){
+   const li = document.createElement('li')
+   li.innerHTML = `${langName}`
+   document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('python')
+    addLanguage('ruby')
+
+    function addOptiLanguage(langName){
+       const li =  document.createElement('li')
+       const addText = document.createTextNode(langName)
+       li.appendChild(addText)
+       document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+
+    //Edit
+
+   const secondLang =  document.querySelector('li:nth-child(2)')
+
+   //secondLang.innerHTML = "hello"
+
+   const newLi = document.createElement('li')
+
+   newLi.textContent = "reactjs"
+
+   secondLang.replaceWith(newLi)
+
+   //Edit
+
+   const firstlang =  document.querySelector('li:first-child')
+
+   firstlang.outerHTML = '<li>Typescript</li>'
+
+   // remove
+
+   const lastlang = document.querySelector('li:last-child')
+   lastlang.remove()
+</script>
+</html>
